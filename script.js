@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
        });
      },
      {
-       rootMargin: '0px 0px -550px 0px', // Adjust the threshold for triggering the color inversion
+       rootMargin: '0px 0px -575px 0px', // Adjust the threshold for triggering the color inversion
      }
   );
  
