@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #02122a; /* Dark Blue */
+  --primary-color-dark: #010a0e; /* Very Dark Blue */
+  --secondary-color: #ffffff; /* White */
+  --text-dark: #02122a; /* Dark Blue Text */
+  --text-light: #7CB9E8; /* Light Blue Text */
+  --extra-light: #ffffff; /* Extra Dark Blue */
+  --max-width:  1200px;
+}
+
+* {
+  padding:   0;
+  margin:   0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-color); /* Dark Gray */
+  color: var(--secondary-color); /* White */
+}
+
+nav {
+  width:   100%;
+  position: fixed;
+  top:   0;
+  left:   0;
+  background-color: var(--primary-color); /* Dark Gray */
+  border: 5px solid #02122a; /* Dark Blue Border */
+  z-index:   99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding:   1.5rem   1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size:   1.5rem;
+  font-weight:   600;
+  color: var(--secondary-color); /* White */
+  transition:   0.3s;
+}
+
+nav .logo a:hover {
+  color: var(--text-dark); /* Light Gray */
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size:   2rem;
+  color: var(--secondary-color); /* White */
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap:   1rem;
+  list-style: none;
+  transition: left   0.3s;
+}
+
+ul li a {
+  padding:   0.5rem   1rem;
+  border:   2px solid transparent;
+  text-decoration: none;
+  font-weight:   600;
+  color: var(--secondary-color); /* Dark Gray */
+  transition:   0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color); /* White */
+  border-bottom-color: var(--secondary-color); /* White */
+  color: var(--secondary-color); /* White */
+}
+
+.section {
+  background-color: var(--extra-light); /* Extra Dark Gray */
+}
+
+.section__container {
+  min-height:   100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding:   1rem;
+  display: grid;
+  grid-template-columns: repeat(2,   1fr);
+  gap:   4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing:   2px;
+  color: var(--primary-color); /* Medium Gray */
+  font-weight:   600;
+  margin-bottom:   0.5rem;
+}
+
+.title {
+  font-size:   2.5rem;
+  font-weight:   400;
+  line-height:   3rem;
+  color: var(--text-dark); /* Dark Gray */
+  margin-bottom:   1rem;
+}
+
+.title span {
+  font-weight:   600;
+}
+
+.description {
+  line-height:   1.5rem;
+  color: var(--primary-color); /* Medium Gray */
+  margin-bottom:   2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap:   1rem;
+}
+
+.action__btns button {
+  font-size:   1rem;
+  font-weight:   600;
+  letter-spacing:   2px;
+  padding:   1rem   2rem;
+  outline: none;
+  border:   2px solid var(--secondary-color);
+  border-radius:   10px;
+  transition: background-color   0.3s, color   0.3s, box-shadow   0.3s;
+  cursor: pointer;
+  box-shadow:   0   2px   4px rgba(0,   0,   0,   0.1);
+}
+
+.skill_btn, .project_btn {
+  font-family: "Poppins", sans-serif;
+}
+
+.skill_btn {
+  background-color: var(--primary-color); 
+  color: var(--secondary-color); 
+  box-shadow:   0   2px   4px rgba(0,   0,   0,   0.1);
+}
+
+.skill_btn:hover {
+  background-color: var(--extra-light); 
+  color: var(--primary-color-dark); 
+  border:   2px solid var(--primary-color);
+  box-shadow:   0   4px   8px rgba(0,   0,   0,   0.2);
+}
+
+.project_btn {
+  background-color: var(--primary-color); 
+  color: var(--secondary-color); 
+  box-shadow:   0   2px   4px rgba(0,   0,   0,   0.1);
+}
+
+.project_btn:hover {
+  background-color: var(--extra-light); 
+  color: var(--primary-color-dark); 
+  border:   2px solid var(--primary-color);
+  box-shadow:   0   4px   8px rgba(0,   0,   0,   0.2);
+}
+
+
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem,   90%);
+  border-radius:   100%;
+}
+
+@media (width <   750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width:   100%;
+    height: calc(100vh -   85px);
+    left: -100%;
+    top:   85px;
+    background-color: var(--extra-light); /* Extra Dark Gray */
+    flex-direction: column;
+    justify-content: center;
+    gap:   3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left:   0;
+  }
+
+  ul li a {
+    font-size:   1.25rem;
+  }
+
+  .section__container {
+    padding:   15rem   1rem   10rem   1rem;
+    text-align: center;
+    grid-template-columns: repeat(1,   1fr);
+  }
+
+  .image {
+    grid-area:   1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+
+#skills-section {
+  background-color: var(--primary-color);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.skills-container {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 30px;
+  background: var(--secondary-color);
+  box-shadow: 15px 15px 30px var(--primary-color-dark),
+    -7.5px -7.5px 15px var(--extra-light);
+  padding: 1.5rem;
+  text-align: left;
+  color: var(--primary-color);
+  overflow: hidden;
+  position: relative; /* Add position relative */
+}
+
+.logo-container {
+  position: absolute; /* Position absolutely within the card */
+  top: 1.5rem; /* Adjust top position */
+  right: 1.5rem; /* Adjust right position */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Adjust gap between logos */
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: none; /* Remove the fixed height */
+  overflow-y: visible; /* Remove the scrollbar */
+}
+
+.card ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+/* Add a new class for the inverted header style */
+nav.inverted {
+  background-color: var(--secondary-color);
+}
+
+nav.inverted .logo a {
+  color: var(--primary-color);
+}
+
+nav.inverted .checkbox i {
+  color: var(--primary-color);
+}
+
+nav.inverted ul li a {
+  color: var(--primary-color);
+}
+
+nav.inverted .logo a:hover {
+  color: var(--text-lightk); /* Light Gray */
+}
