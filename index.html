@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ronka portfolio</title>
+   <style>
+   	body {
+   		background-color: black;
+   		color: green;
+   		font-family: monospace;
+   		padding: 20px;
+   		position: relative;
+   	}
+   	h1 {
+   		font-size: 36px;
+   	}
+   	.contacts {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    }
+    .contacts a {
+        color: green;
+        text-decoration: none;
+    }
+    .contacts a:hover {
+        color: red;
+}
+   	.clickable:hover {
+   		color: red;
+   		cursor: pointer;
+   	}
+   	.modal {
+   		display: none;
+   		position: fixed;
+   		z-index: 1;
+   		left: 0;
+   		top: 0;
+   		width: 100%;
+   		height: 100%;
+   		overflow: auto;
+   		background-color: rgba(0, 0, 0, 0.8);
+   	}
+   	.modal-content {
+   		background-color: black;
+   		color: green;
+   		margin: 15% auto;
+   		padding: 20px;
+   		border: 1px solid green;
+   		width: 80%;
+   		max-width: 600px;
+   		position: relative;
+   	}
+   	.close {
+   		color: green;
+   		position: absolute;
+   		top: 5px;
+   		right: 10px;
+   		font-size: 28px;
+   		font-weight: bold;
+   		cursor: pointer;
+   	}
+   	.close:hover {
+   		color: red;
+   	}
+    
+   </style>
+</head>
+<body>
+   <div class="contacts">
+   	<a href="https://github.com/raunak11" target="_blank">github.com/raunak11</a><br>
+   	<a href="https://leetcode.com/ronka" target="_blank">leetcode/ronka</a><br>
+   	<a href="https://linkedin.com/in/ronka6600" target="_blank">linkedin.com/in/ronka6600</a><br>
+   	<a href="mailto:raunak.rajput6600@gmail.com">raunak.rajput6600@gmail.com</a>
+   </div>
+   <h1 class="clickable" id="name" ondblclick="openModal('nameModal')">Raunak Rajput</h1>
+   i dont like web dev so here's a simple terminal style website <br>
+   im great at ai/ml in python and love c++ for data structures and algorithms
+   <pre>
+
+<strong><u>Experience</u></strong>
+- <strong class="clickable" id="accureInc" ondblclick="openModal('accureIncModal')">Accure Inc</strong>
+     Role: Data Scientist                      (Feb 24 - present)
+        - Enhanced posture detection accuracy by 35% through fine-tuning Google's Vision Transformer HuggingFace architecture and leveraging MediaPipe's object detection model, augmented with mathematical computations. 
+        - Conducted gait analysis using CCTV inputs for person recognition without facial identification, implemented in Python, with initial accuracy of 60%
+        - Built custom classes for implementation of the above models in Momentum
+    
+- <strong class="clickable" id="yoctozant" ondblclick="openModal('yoctozantModal')">Yoctozant Technologies</strong>
+ Role: Custom IC Intern                    (Jun 23 - Aug 23)
+    - Designed custom Ring Oscillator of frequency 200MHz for boot sequence of FSM.
+    - Gained Experience in LTSpice and Linux automation for data sheet analysis.
+    - Made several circuits with 180nm TSMC Technology including Inverters, Buffers, etc.
+
+<strong><u>Education</u></strong>
+- <strong class="clickable" id="pesUniversity" ondblclick="openModal('pesUniversityModal')"> PES University</strong>
+    Major Degree: B.Tech Electrical and Electronics Engineering (Jun 24)
+    GPA: 7.34
+    Minor Degree: B.Tech Computer Science (Dec 23)
+    GPA: 8.00
+   
+- <strong class="clickable" id="nationalSchool" ondblclick="openModal('nationalSchoolModal')"> National Public School</strong>
+    Degree: Higher Secondary School Certificate
+    GPA: 8.96
+    End Date: Mar 2020
+   
+<strong>Coursework</strong> 
+   Data Structures & Algorithms     Design & Analysis of Algorithms     Operating Systems     Database Management Systems
+   Database Technologies     Embedded Systems     Soft Computing Techniques     Data Science & Machine Learning
+   Robot Operating Systems(ROS)     ML using Tensorflow
+   
+
+<strong><u>Skills</u></strong>
+    - Languages: C/C++, Python, HTML/CSS, (Familiar: Javascript), GIT, Github, Linux
+    - Python Libraries:  Numpy, Pandas, OpenCV, Matplotlib, ScikitLearn, TensorFlow, Pytorch, HuggingFace Transformers
+    - Electronics: Arduino, LTSpice, ROS, Fusion360, MSP430, MATLAB
+
+<strong><u>Projects</u></strong>
+- <strong class="clickable" id="scara" ondblclick="openModal('scaraModal')">SCARA for Test Tube Assortment</strong>   Arduino (C++), Fusion360, ROS
+    - Engineered a state-of-the-art 4DOF SCARA robotic arm, modeled in Fusion360, simulated via ROS, fabricated using 3D printing technology, and programmed utilizing Arduino with 98% movement accuracy
+
+- <strong class="clickable" id="spam" ondblclick="openModal('spamModal')">Spam Detection</strong>   Python, ScikitLearn, Pandas, Numpy, Seaborn, NLTK, Streamlit
+    - Developed spam detection system for SMS/emails utilizing Python. Engineered and executed the integration of Streamlit, optimizing data analysis capabilities and achieving an accuracy of 95.23% and a precision score of 100%.
+
+- <strong class="clickable" id="sarcasm" ondblclick="openModal('sarcasmModal')">Sarcasm Detection</strong>   Python, Pandas, Numpy, NLTK
+    - Created a state-of-the-art neural network-based sarcasm detector, achieving high accuracy in identifying and distinguishing sarcastic tones in textual data, with an interactive prediction function for practical 
+    application with an accuracy of 98.14%.
+
+- <strong class="clickable" id="sudoku" ondblclick="openModal('sudokuModal')">OpenCV Suduko Solver</strong>   Python, OpenCV, Tensorflow
+    - Developed a Python application utilizing OpenCV to detect, TensorFlow to identify numbers on Sudoku puzzle boards, subsequently solving and displaying the completed puzzles obtaining an accuracy of 90.4%.
+</pre>
+
+<!-- Modals -->
+<div id="nameModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('nameModal')">&times;</span>
+        <h2>Raunak Rajput</h2>
+        <img src="profilePic2.jpeg" alt="me">
+        <!-- Add your content here -->
+    </div>
+</div>
+
+<div id="accureIncModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('accureIncModal')">&times;</span>
+        <h2>Accure Inc</h2>
+        <p>Here are some details about my work at Accure Inc:</p>
+        <img src="accure_inc_project.png" alt="Project Image">
+        <p>This is a sample image related to the project.</p>
+        <p>You can include additional text, images, or any other content you want to display in this modal window.</p>
+    </div>
+</div>
+
+<div id="yoctozantModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('yoctozantModal')">&times;</span>
+       <h2>Yoctozant Technologies</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="pesUniversityModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('pesUniversityModal')">&times;</span>
+       <h2>PES University</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="nationalSchoolModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('nationalSchoolModal')">&times;</span>
+       <h2>National Public School</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="scaraModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('scaraModal')">&times;</span>
+       <h2>SCARA for Test Tube Assortment</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="spamModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('spamModal')">&times;</span>
+       <h2>Spam Detection</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="sarcasmModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('sarcasmModal')">&times;</span>
+       <h2>Sarcasm Detection</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<div id="sudokuModal" class="modal">
+   <div class="modal-content">
+       <span class="close" onclick="closeModal('sudokuModal')">&times;</span>
+       <h2>OpenCV Suduko Solver</h2>
+       <!-- Add your content here -->
+   </div>
+</div>
+
+<script>
+   function openModal(modalId) {
+       var modal = document.getElementById(modalId);
+       modal.style.display = "block";
+   }
+
+   function closeModal(modalId) {
+       var modal = document.getElementById(modalId);
+       modal.style.display = "none";
+   }
+
+   window.onclick = function(event) {
+       var modals = document.getElementsByClassName("modal");
+       for (var i = 0; i < modals.length; i++) {
+           if (event.target == modals[i]) {
+               modals[i].style.display = "none";
+           }
+       }
+   }
+</script>
+</body>
+</html>
